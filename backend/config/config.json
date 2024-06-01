@@ -1,0 +1,9 @@
+{
+    "development": {
+        "username": "root",
+        "password": "Ajay@2002",
+        "database": "linkedin_scraper",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}
