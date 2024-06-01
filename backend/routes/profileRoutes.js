@@ -6,10 +6,8 @@ const router = express.Router();
 
 router.post('/', async(req, res) => {
     try {
-        // Check if the name field is null, if so, provide a default value
         const name = req.body.name ? req.body.name : 'Unknown';
 
-        // Create a new Profile instance with the processed data
         const profile = await db.Profile.create({
             name: name,
             url: req.body.url,
@@ -22,7 +20,6 @@ router.post('/', async(req, res) => {
 
         console.log("Received profile data: ", profile);
 
-        // Respond with the created profile
         res.status(201).json(profile);
     } catch (error) {
         console.error(error);
